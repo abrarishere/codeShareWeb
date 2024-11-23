@@ -5,6 +5,7 @@ import connectToDb from "./db/connectToDb.js";
 import Code from "./models/code.model.js";
 
 const app = express();
+const port = import.meta.env.PORT || 3000;
 
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
@@ -37,7 +38,7 @@ app.get("/api/code/:id", async (req, res) => {
   }
 });
 
-app.listen(3000, () => {
+app.listen(PORT, () => {
   connectToDb();
   console.log("Server is running on port 3000");
 });
