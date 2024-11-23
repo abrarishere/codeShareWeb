@@ -122,7 +122,7 @@ const EditorContainer = () => {
 
     const { _id } = await res.json();
     if (_id) {
-      const link = `${mineUrl}/${_id}`;
+      const link = `${mineUrl}/code/${_id}`;
       setLink(link);
       setIsChanged(false);
     }

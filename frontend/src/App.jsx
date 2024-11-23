@@ -1,13 +1,9 @@
-import NoteCodeLogo from "./assets/NoteCodeLogo.svg";
-import EditorContainer from "./components/EditorContainer";
-import EditorContainerWithId from "./components/EditorContainerWithId";
-import { Routes, Route } from "react-router-dom";
-import { useParams } from "react-router-dom";
+  import NoteCodeLogo from "./assets/NoteCodeLogo.svg";
+  import EditorContainer from "./components/EditorContainer";
+  import EditorContainerWithId from "./components/EditorContainerWithId";
+  import { Routes, Route } from "react-router-dom";
 
-const App = () => {
   const App = () => {
-    const { id } = useParams();
-
     return (
       <div className="w-full min-h-screen overflow-hidden main">
         <div className="flex flex-col h-full w-full justify-center items-center">
@@ -23,12 +19,11 @@ const App = () => {
           {/* Editor Container */}
           <Routes>
             <Route path="/" element={<EditorContainer />} />
-            {id && <Route path="/:id" element={<EditorContainerWithId />} />}
+            <Route path="/code/:id" element={<EditorContainerWithId />} />
           </Routes>
         </div>
       </div>
     );
   };
-};
 
-export default App;
+  export default App;
