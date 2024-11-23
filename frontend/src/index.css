@@ -1,0 +1,19 @@
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  font-family: "Outfit", sans-serif;
+}
+
+.main {
+  background:
+    url("./assets/Hero-Background-notecode.svg") no-repeat center center/cover,
+    linear-gradient(
+      to bottom right,
+      rgba(183, 135, 245, 1),
+      rgba(116, 62, 228, 1)
+    );
+}
