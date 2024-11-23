@@ -5,7 +5,7 @@ import connectToDb from "./db/connectToDb.js";
 import Code from "./models/code.model.js";
 
 const app = express();
-const port = import.meta.env.PORT || 3000;
+const PORT = process.env.PORT || 3000;
 
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
