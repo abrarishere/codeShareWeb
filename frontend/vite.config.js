@@ -4,5 +4,16 @@ import monacoEditorPlugin from "vite-plugin-monaco-editor";
 
 // https://vite.dev/config/
 export default defineConfig({
-  plugins: [react(), monacoEditorPlugin()],
+  plugins: [
+    react(),
+    monacoEditorPlugin.default({
+      languageWorkers: [
+        "editorWorkerService", // Default worker
+        "json",
+        "css",
+        "html",
+        "typescript",
+      ],
+    }),
+  ],
 });
