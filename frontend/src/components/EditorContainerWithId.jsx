@@ -6,7 +6,7 @@ import Select, { components } from "react-select";
 import ShareIcon from "../assets/Share.svg";
 import LinkIcon from "../assets/link.svg";
 import DropArrow from "../assets/down arrow.svg";
-import { set } from "mongoose";
+
 
 const DropdownIndicator = (props) => (
   <components.DropdownIndicator {...props}>
